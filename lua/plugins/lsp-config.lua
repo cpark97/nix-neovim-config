@@ -1,4 +1,3 @@
--- TODO: cmp capabilities
 local function nvim_lspconfig_config()
   local lspconfig = require("lspconfig")
   local blink = require("blink.cmp")
@@ -184,7 +183,7 @@ return {
     before = function()
       require("lz.n").load({
         {
-          -- Snippet Engine & its associated nvim-cmp source
+          -- Snippet Engine
           "luasnip",
           before = function()
             require("lz.n").load({ "friendly-snippets" })
