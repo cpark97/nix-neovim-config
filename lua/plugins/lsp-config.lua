@@ -178,7 +178,7 @@ return {
 
   {
     "blink.cmp",
-    event = "InsertEnter",
+    event = { "InsertEnter", "CmdlineEnter" },
     enabled = not vim.g.vscode,
     before = function()
       require("lz.n").load({
@@ -200,10 +200,10 @@ return {
       blink.setup({
         keymap = {
           preset = "default",
-          ["<Tab>"] = {},
-          ["<S-Tab>"] = {},
-          ["<C-l>"] = { "snippet_forward", "fallback" },
-          ["<C-h>"] = { "snippet_backward", "fallback" },
+          ["<tab>"] = {},
+          ["<s-tab>"] = {},
+          ["<c-l>"] = { "snippet_forward", "fallback" },
+          ["<c-h>"] = { "snippet_backward", "fallback" },
         },
         appearance = {
           use_nvim_cmp_as_default = true,
@@ -213,6 +213,28 @@ return {
         },
         sources = {
           default = { "lsp", "path", "snippets", "buffer" },
+        },
+        completion = {
+          menu = {
+            draw = {
+              components = {
+                label_description = {
+                  text = function(ctx)
+                    if ctx.label_description and ctx.label_description ~= "" then
+                      return ctx.label_description
+                    elseif
+                      ctx.item.data
+                      and ctx.item.data.entryNames
+                      and ctx.item.data.entryNames[1]
+                      and ctx.item.data.entryNames[1].source
+                    then
+                      return ctx.item.data.entryNames[1].source
+                    end
+                  end,
+                },
+              },
+            },
+          },
         },
       })
     end,
