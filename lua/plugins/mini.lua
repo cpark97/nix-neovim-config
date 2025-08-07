@@ -7,7 +7,42 @@ return { -- Collection of various small independent plugins/modules
     --  - va)  - [V]isually select [A]round [)]paren
     --  - yinq - [Y]ank [I]nside [N]ext [']quote
     --  - ci'  - [C]hange [I]nside [']quote
-    require("mini.ai").setup({ n_lines = 500 })
+    local spec_treesitter = require("mini.ai").gen_spec.treesitter
+    require("mini.ai").setup({
+      n_lines = 500,
+
+      mappings = {
+        around_last = "ap",
+        inside_last = "ip",
+      },
+
+      custom_textobjects = {
+        f = spec_treesitter({
+          a = "@function.outer",
+          i = "@function.inner",
+        }),
+        c = spec_treesitter({
+          a = "@class.outer",
+          i = "@class.inner",
+        }),
+        a = spec_treesitter({
+          a = "@parameter.outer",
+          i = "@parameter.inner",
+        }),
+        b = spec_treesitter({
+          a = "@block.outer",
+          i = "@block.inner",
+        }),
+        b = spec_treesitter({
+          a = "@block.outer",
+          i = "@block.inner",
+        }),
+        ["*"] = spec_treesitter({
+          a = "@comment.outer",
+          i = "@comment.inner",
+        }),
+      },
+    })
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --

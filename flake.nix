@@ -166,6 +166,7 @@
             theme = with pkgs.vimPlugins; [ catppuccin-nvim ];
             language = with pkgs.vimPlugins; [
               nvim-treesitter.withAllGrammars
+              nvim-treesitter-textobjects
 
               nvim-lspconfig
               fidget-nvim
