@@ -2,7 +2,7 @@ return {
   "neo-tree.nvim",
   enabled = not vim.g.vscode,
   keys = {
-    { "<leader>n", ":Neotree filesystem reveal left toggle<CR>", { desc = "Toggle Neotree" } }
+    { "<leader>n", ":Neotree filesystem reveal left toggle<CR>", { desc = "Toggle Neotree" } },
   },
   before = function()
     require("lz.n").trigger_load({ "plenary.nvim", "nvim-web-devicons" })
