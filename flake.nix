@@ -163,6 +163,8 @@
               oil-nvim
 
               todo-comments-nvim
+
+              which-key-nvim
             ];
             theme = with pkgs.vimPlugins; [ catppuccin-nvim ];
             language = with pkgs.vimPlugins; [
