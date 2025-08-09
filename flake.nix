@@ -155,6 +155,7 @@
               nvim-web-devicons
 
               mini-nvim
+              snacks-nvim
 
               neo-tree-nvim
               nui-nvim
