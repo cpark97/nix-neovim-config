@@ -149,7 +149,7 @@
               comment-nvim
               conform-nvim
               gitsigns-nvim
-              leap-nvim
+              flash-nvim
 
               lualine-nvim
               nvim-web-devicons
