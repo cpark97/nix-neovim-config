@@ -1,5 +1,6 @@
 return { -- Collection of various small independent plugins/modules
   "mini.nvim",
+  event = "DeferredUIEnter",
   after = function()
     -- Better Around/Inside textobjects
     --
