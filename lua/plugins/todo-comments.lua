@@ -1,6 +1,6 @@
 return {
   "todo-comments.nvim",
-  event = "VimEnter",
+  event = "DeferredUIEnter",
   enabled = not vim.g.vscode,
   before = function()
     require("lz.n").trigger_load({ "nvim-lua/plenary.nvim" })
