@@ -34,6 +34,8 @@ vim.cmd("set exrc")
 -- Make line numbers default
 vim.opt.number = true
 
+vim.opt.relativenumber = true
+
 -- Don't show the mode, since it's already in the status line
 -- status line 아래에 모드 표시 비활성화
 vim.opt.showmode = false
