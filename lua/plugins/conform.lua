@@ -23,7 +23,11 @@ return {
         lsp_format = "fallback",
       },
     })
+
+    -- gq 등으로 포매팅 할 때 적용
+    -- https://neovim.io/doc/user/change.html#gq
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+
     vim.keymap.set("n", "<leader>f", function()
       require("conform").format({ lsp_fallback = true })
     end, { desc = "Format Document" })
