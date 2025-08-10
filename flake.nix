@@ -165,6 +165,7 @@
               todo-comments-nvim
 
               which-key-nvim
+              trouble-nvim
             ];
             theme = with pkgs.vimPlugins; [ catppuccin-nvim ];
             language = with pkgs.vimPlugins; [
