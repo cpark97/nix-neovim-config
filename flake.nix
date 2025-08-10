@@ -166,6 +166,8 @@
 
               which-key-nvim
               trouble-nvim
+
+              yanky-nvim
             ];
             theme = with pkgs.vimPlugins; [ catppuccin-nvim ];
             language = with pkgs.vimPlugins; [
