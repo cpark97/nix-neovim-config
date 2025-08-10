@@ -168,6 +168,8 @@
               trouble-nvim
 
               yanky-nvim
+
+              nvim-ts-autotag
             ];
             theme = with pkgs.vimPlugins; [ catppuccin-nvim ];
             language = with pkgs.vimPlugins; [
