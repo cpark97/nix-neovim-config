@@ -68,6 +68,7 @@ return { -- Collection of various small independent plugins/modules
     })
 
     require("mini.splitjoin").setup({})
+    require("mini.align").setup({})
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,
