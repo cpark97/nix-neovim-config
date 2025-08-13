@@ -7,7 +7,9 @@ return {
       lua = { "stylua" },
       nix = { "nixfmt" },
       javascript = { "prettier" },
+      javascriptreact = { "prettier" },
       typescript = { "prettier" },
+      typescriptreact = { "prettier" },
       svelte = { "prettier" },
     }
 
