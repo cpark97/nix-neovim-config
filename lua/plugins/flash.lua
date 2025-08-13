@@ -2,7 +2,14 @@ return {
   "flash.nvim",
   event = "DeferredUIEnter",
   after = function()
-    require("flash").setup({})
+    require("flash").setup({
+      modes = {
+        char = {
+          -- disable f, F, t, T
+          enabled = false,
+        },
+      },
+    })
 
     vim.keymap.set({ "n", "x", "o" }, "s", function()
       require("flash").jump()
