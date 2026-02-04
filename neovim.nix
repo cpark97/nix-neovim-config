@@ -7,6 +7,7 @@
   lib,
   configDir ? null,
   plugins ? [ ],
+  runtimeDeps ? [ ],
 }:
 let
   wrappedNeovim = wrapNeovimUnstable neovim-unwrapped {
@@ -18,10 +19,11 @@ let
       text = wrappedNeovim.luaRcContent;
     in
     writeText name text;
+  runtimeDepsBinPath = lib.makeBinPath runtimeDeps;
 in
 runCommand "nvim"
   {
-    inherit wrappedNeovim configDir;
+    inherit wrappedNeovim configDir runtimeDepsBinPath;
     nativeBuildInputs = [ makeWrapper ];
   }
   (
@@ -44,6 +46,7 @@ runCommand "nvim"
     + ''
       makeWrapper "$wrappedNeovim/bin/nvim" "$out/bin/nvim" \
         --set-default VIMINIT "lua dofile(\"$out/init.lua\")" \
+        --suffix PATH ":" "$runtimeDepsBinPath" \
         --append-flags "--cmd \"
           lua
           vim.opt.runtimepath:prepend('$configDir')
