@@ -5,6 +5,7 @@
 -- 이때 새로운 라인에 어떠한 문자도 입력하지 않은 채로 다시 엔터를 치거나 Esc 치거나 다른 줄로 커서를 이동시키면 들여쓰기가 사라진다.
 -- default on
 -- set autoindent
+vim.opt.autoindent = false
 
 -- >>, << 명령을 이용해 들여쓰기, 내어쓰기 할 때 삽입될 스페이스 개수
 -- default 8
@@ -63,6 +64,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 -- 커서가 맨 밑 라인이나 맨 위 라인이 아니더라도 10번째 라인부터 화면이 스크롤됨
 vim.opt.scrolloff = 10
+
+vim.opt.foldlevelstart = 99
+vim.opt.foldtext = ""
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 -- 원래 검색하면 찾은 결과가 하나씩 하이라이팅되면서 표시되는데, 모든 검색결과에 하이라이팅 표시

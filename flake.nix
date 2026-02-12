@@ -28,7 +28,12 @@
       packages = makeAllSystems (
         { pkgs, ... }:
         {
-          default = pkgs.callPackage ./neovim.nix { configDir = ./config; };
+          default = pkgs.callPackage ./neovim.nix {
+            configDir = ./config;
+            plugins = with pkgs.vimPlugins; [
+              nvim-treesitter.withAllGrammars
+            ];
+          };
         }
       );
       devShells = makeAllSystems (
