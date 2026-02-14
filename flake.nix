@@ -53,6 +53,18 @@
                 plugin = oil-nvim;
                 optional = true;
               }
+              {
+                plugin = blink-cmp;
+                optional = true;
+              }
+              {
+                plugin = luasnip;
+                optional = true;
+              }
+              {
+                plugin = friendly-snippets;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
