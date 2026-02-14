@@ -49,6 +49,10 @@
                 plugin = conform-nvim;
                 optional = true;
               }
+              {
+                plugin = oil-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
