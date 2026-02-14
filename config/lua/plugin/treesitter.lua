@@ -19,3 +19,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end,
 })
+
+-- nvim-treesitter-textobjects
+-- Disable entire built-in ftplugin mappings to avoid conflicts
+vim.g.no_plugin_maps = true

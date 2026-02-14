@@ -32,6 +32,7 @@
             configDir = ./config;
             plugins = with pkgs.vimPlugins; [
               nvim-treesitter.withAllGrammars
+              nvim-treesitter-textobjects
               nvim-lspconfig
               {
                 plugin = fidget-nvim;
@@ -65,6 +66,7 @@
                 plugin = friendly-snippets;
                 optional = true;
               }
+              mini-nvim
             ];
             runtimeDeps = with pkgs; [
               # language servers
