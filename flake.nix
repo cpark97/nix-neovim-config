@@ -32,6 +32,11 @@
             configDir = ./config;
             plugins = with pkgs.vimPlugins; [
               nvim-treesitter.withAllGrammars
+              nvim-lspconfig
+            ];
+            runtimeDeps = with pkgs; [
+              lua-language-server
+              nixd
             ];
           };
         }
