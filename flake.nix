@@ -45,10 +45,20 @@
                 plugin = telescope-ui-select-nvim;
                 optional = true;
               }
+              {
+                plugin = conform-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
+              # language servers
               lua-language-server
               nixd
+
+              # formatters
+              stylua
+              nixfmt
+
               ripgrep
             ];
           };
