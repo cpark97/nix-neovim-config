@@ -1,4 +1,5 @@
 require("plugin.lsp.keymap")
+require("plugin.lsp.fidget")
 
 local servers = {
   "nixd",

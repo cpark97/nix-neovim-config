@@ -34,6 +34,10 @@
               nvim-treesitter.withAllGrammars
               nvim-lspconfig
               {
+                plugin = fidget-nvim;
+                optional = true;
+              }
+              {
                 plugin = telescope-nvim;
                 optional = true;
               }
