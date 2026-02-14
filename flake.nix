@@ -67,6 +67,7 @@
                 optional = true;
               }
               mini-nvim
+              snacks-nvim
             ];
             runtimeDeps = with pkgs; [
               # language servers
