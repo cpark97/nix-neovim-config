@@ -33,10 +33,19 @@
             plugins = with pkgs.vimPlugins; [
               nvim-treesitter.withAllGrammars
               nvim-lspconfig
+              {
+                plugin = telescope-nvim;
+                optional = true;
+              }
+              {
+                plugin = telescope-ui-select-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               lua-language-server
               nixd
+              ripgrep
             ];
           };
         }
