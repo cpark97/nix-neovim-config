@@ -80,6 +80,10 @@
                 plugin = trouble-nvim;
                 optional = true;
               }
+              {
+                plugin = which-key-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
