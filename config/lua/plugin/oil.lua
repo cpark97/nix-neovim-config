@@ -12,7 +12,9 @@ local function setup()
     },
   })
 
-  vim.keymap.set("n", "-", oil.toggle_float, { desc = "Toggle Oil" })
+  vim.keymap.set("n", "-", function()
+    oil.open_float(nil, { preview = {} })
+  end, { desc = "Toggle Oil" })
 end
 
 setup()
