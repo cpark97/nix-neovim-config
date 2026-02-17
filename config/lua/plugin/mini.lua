@@ -48,6 +48,8 @@ local function setup()
   if not vim.g.vscode then
     require("mini.cursorword").setup()
     require("mini.trailspace").setup()
+
+    require("mini.statusline").setup()
   end
 end
 

@@ -41,6 +41,9 @@ vim.opt.relativenumber = true
 -- status line 아래에 모드 표시 비활성화
 vim.opt.showmode = false
 
+-- global statusline
+vim.opt.laststatus = 3
+
 -- Save undo history
 -- 원래 buffer를 닫으면 undo history 날아감
 -- undo history를 파일에 저장해서 같은 파일을 다시 열면 undo history를 유지
