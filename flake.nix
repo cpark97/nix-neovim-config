@@ -72,6 +72,10 @@
                 plugin = neo-tree-nvim;
                 optional = true;
               }
+              {
+                plugin = gitsigns-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
