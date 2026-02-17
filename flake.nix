@@ -76,6 +76,10 @@
                 plugin = gitsigns-nvim;
                 optional = true;
               }
+              {
+                plugin = trouble-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
