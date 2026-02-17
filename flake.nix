@@ -68,6 +68,10 @@
               }
               mini-nvim
               snacks-nvim
+              {
+                plugin = neo-tree-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
