@@ -6,6 +6,16 @@ local function setup()
   local formatters_by_ft = {
     lua = { "stylua" },
     nix = { "nixfmt" },
+    javascript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
+    svelte = { "prettier" },
+    css = { "prettier" },
+    html = { "prettier" },
+    json = { "prettier" },
+    yaml = { "prettier" },
+    markdown = { "prettier" },
   }
 
   if type(vim.g.formatters_by_ft) == "table" then

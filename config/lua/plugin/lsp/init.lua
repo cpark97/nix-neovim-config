@@ -4,6 +4,8 @@ require("plugin.lsp.fidget")
 local servers = {
   "nixd",
   "lua_ls",
+  "ts_ls",
+  "svelte",
 }
 
 local setup_functions = {}

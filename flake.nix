@@ -97,10 +97,13 @@
               # language servers
               lua-language-server
               nixd
+              typescript-language-server
+              svelte-language-server
 
               # formatters
               stylua
               nixfmt
+              prettier
 
               ripgrep
             ];
