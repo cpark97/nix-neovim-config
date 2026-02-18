@@ -84,6 +84,10 @@
                 plugin = which-key-nvim;
                 optional = true;
               }
+              {
+                plugin = todo-comments-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
