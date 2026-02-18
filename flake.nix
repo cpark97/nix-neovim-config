@@ -88,6 +88,10 @@
                 plugin = todo-comments-nvim;
                 optional = true;
               }
+              {
+                plugin = monokai-pro-nvim;
+                optional = true;
+              }
             ];
             runtimeDeps = with pkgs; [
               # language servers
