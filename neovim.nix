@@ -6,10 +6,17 @@
   makeWrapper,
   lib,
   configDir ? null,
-  plugins ? [ ],
+  startPlugins ? [ ],
+  optionalPlugins ? [ ],
   runtimeDeps ? [ ],
 }:
 let
+  plugins =
+    startPlugins
+    ++ (map (plugin: {
+      inherit plugin;
+      optional = true;
+    }) optionalPlugins);
   wrappedNeovim = wrapNeovimUnstable neovim-unwrapped {
     inherit plugins;
   };

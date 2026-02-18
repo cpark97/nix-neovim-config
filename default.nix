@@ -1,68 +1,28 @@
 { pkgs, ... }:
 pkgs.callPackage ./neovim.nix {
   configDir = ./config;
-  plugins = with pkgs.vimPlugins; [
+  startPlugins = with pkgs.vimPlugins; [
     nvim-treesitter.withAllGrammars
     nvim-treesitter-textobjects
     nvim-lspconfig
-    {
-      plugin = fidget-nvim;
-      optional = true;
-    }
-    {
-      plugin = telescope-nvim;
-      optional = true;
-    }
-    {
-      plugin = telescope-ui-select-nvim;
-      optional = true;
-    }
-    {
-      plugin = conform-nvim;
-      optional = true;
-    }
-    {
-      plugin = oil-nvim;
-      optional = true;
-    }
-    {
-      plugin = blink-cmp;
-      optional = true;
-    }
-    {
-      plugin = luasnip;
-      optional = true;
-    }
-    {
-      plugin = friendly-snippets;
-      optional = true;
-    }
     mini-nvim
     snacks-nvim
-    {
-      plugin = neo-tree-nvim;
-      optional = true;
-    }
-    {
-      plugin = gitsigns-nvim;
-      optional = true;
-    }
-    {
-      plugin = trouble-nvim;
-      optional = true;
-    }
-    {
-      plugin = which-key-nvim;
-      optional = true;
-    }
-    {
-      plugin = todo-comments-nvim;
-      optional = true;
-    }
-    {
-      plugin = monokai-pro-nvim;
-      optional = true;
-    }
+  ];
+  optionalPlugins = with pkgs.vimPlugins; [
+    fidget-nvim
+    telescope-nvim
+    telescope-ui-select-nvim
+    conform-nvim
+    oil-nvim
+    blink-cmp
+    luasnip
+    friendly-snippets
+    neo-tree-nvim
+    gitsigns-nvim
+    trouble-nvim
+    which-key-nvim
+    todo-comments-nvim
+    monokai-pro-nvim
   ];
   runtimeDeps = with pkgs; [
     # language servers

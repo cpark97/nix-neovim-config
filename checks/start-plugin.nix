@@ -11,7 +11,7 @@ let
     echo "vim.g.myplugin = true" > "$out/lua/myplugin.lua"
     echo "require('myplugin')" > "$out/plugin/myplugin.lua"
   '';
-  plugins = [
+  startPlugins = [
     myPlugin
   ];
 
@@ -20,7 +20,7 @@ in
 makeNeovimCheck {
   name = "checkStartPlugin";
 
-  neovimAttrs = { inherit plugins; };
+  neovimAttrs = { inherit startPlugins; };
 
   luaThenPhase = ''
     assert(vim.g.myplugin == true);
