@@ -33,7 +33,7 @@ local function setup()
   vim.keymap.set(
     "n",
     "<leader>ng",
-    ":Neotree git_status reveal float toggle<CR>",
+    ":Neotree git_status reveal left toggle<CR>",
     { desc = "Toggle Neotree git status" }
   )
   vim.keymap.set(
