@@ -5,7 +5,14 @@ local function setup()
 
   vim.cmd.packadd("trouble.nvim")
 
-  require("trouble").setup({})
+  require("trouble").setup({
+    preview = {
+      -- when a buffer is not yet loaded, the preview window will be created
+      -- in a scratch buffer with only syntax highlighting enabled.
+      -- Set to false, if you want the preview to always be a real loaded buffer.
+      scratch = false,
+    },
+  })
 
   local keymaps = {
     {
