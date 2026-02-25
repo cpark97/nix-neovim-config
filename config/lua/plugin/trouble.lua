@@ -6,6 +6,7 @@ local function setup()
   vim.cmd.packadd("trouble.nvim")
 
   require("trouble").setup({
+    focus = true,
     preview = {
       -- when a buffer is not yet loaded, the preview window will be created
       -- in a scratch buffer with only syntax highlighting enabled.
