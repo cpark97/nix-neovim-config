@@ -21,6 +21,7 @@ local function setup()
         leave_dirs_open = true,
       },
       hijack_netrw_behavior = "disabled",
+      use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
     },
   })
 
