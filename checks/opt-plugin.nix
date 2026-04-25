@@ -3,7 +3,8 @@
   runCommand,
 }:
 let
-  myPlugin = runCommand "myPlugin" { } ''
+  # wrapNeovimUnstable 내부에서 plugin derivation의 pname을 사용해서 없으면 에러
+  myPlugin = runCommand "myPlugin" { pname = "myPlugin"; } ''
     mkdir "$out"
     mkdir "$out/lua"
     mkdir "$out/plugin"
