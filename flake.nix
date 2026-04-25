@@ -31,6 +31,11 @@
           default = import ./default.nix { inherit pkgs; };
         }
       );
+      overlays = {
+        default = final: prev: {
+          neovim = packages.${prev.stdenv.hostPlatform.system}.default;
+        };
+      };
       devShells = makeAllSystems (
         { system, ... }:
         {
