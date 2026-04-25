@@ -2,7 +2,7 @@
   description = "neovim";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:cpark97/nixpkgs/nixos-unstable";
   };
 
   outputs =
