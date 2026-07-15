@@ -34,7 +34,7 @@ pkgs.callPackage ./neovim.nix {
     # formatters
     stylua
     nixfmt
-    prettier
+    oxfmt
 
     ripgrep
   ];

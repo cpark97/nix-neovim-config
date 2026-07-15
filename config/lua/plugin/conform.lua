@@ -6,16 +6,17 @@ local function setup()
   local formatters_by_ft = {
     lua = { "stylua" },
     nix = { "nixfmt" },
-    javascript = { "prettier" },
-    javascriptreact = { "prettier" },
-    typescript = { "prettier" },
-    typescriptreact = { "prettier" },
-    svelte = { "prettier" },
-    css = { "prettier" },
-    html = { "prettier" },
-    json = { "prettier" },
-    yaml = { "prettier" },
-    markdown = { "prettier" },
+    javascript = { "oxfmt" },
+    javascriptreact = { "oxfmt" },
+    typescript = { "oxfmt" },
+    typescriptreact = { "oxfmt" },
+    svelte = { "oxfmt" },
+    css = { "oxfmt" },
+    html = { "oxfmt" },
+    json = { "oxfmt" },
+    yaml = { "oxfmt" },
+    toml = { "oxfmt" },
+    markdown = { "oxfmt" },
   }
 
   -- FIXME: Currently not working because init is evaluated earlier than exrc.
