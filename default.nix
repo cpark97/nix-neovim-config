@@ -7,6 +7,7 @@ pkgs.callPackage ./neovim.nix {
     nvim-lspconfig
     mini-nvim
     snacks-nvim
+    nvim-web-devicons
   ];
   optionalPlugins = with pkgs.vimPlugins; [
     fidget-nvim
