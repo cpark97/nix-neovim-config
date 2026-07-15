@@ -18,6 +18,10 @@ local function setup()
     markdown = { "prettier" },
   }
 
+  -- FIXME: Currently not working because init is evaluated earlier than exrc.
+  -- possible fix: delay this setup to later event such as VimEnter.
+  -- possible workaround for comform:
+  --   `require("conform").formatters_by_ft.foo = { ... }`
   if type(vim.g.formatters_by_ft) == "table" then
     for k, v in pairs(vim.g.formatters_by_ft) do
       formatters_by_ft[k] = v
